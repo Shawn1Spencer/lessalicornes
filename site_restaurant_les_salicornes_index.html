@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Les Salicornes — Cuisine de saison</title>
+  <meta name="description" content="Restaurant Les Salicornes, cuisine de saison, menu du jour, réservations et informations pratiques." />
+  <style>
+    :root{--bg:#fff;--fg:#111;--muted:#666;--accent:#2a8a5e;--accent-2:#e9f6f0;--card:#fafafa}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg);line-height:1.5}
+    header.hero{position:relative;display:grid;min-height:70vh;place-items:center;text-align:center;color:#fff}
+    .hero::before{content:"";position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;filter:brightness(0.45)}
+    .hero .inner{position:relative;padding:4rem 1.5rem}
+    .badge{display:inline-block;background:var(--accent);color:#fff;padding:.35rem .6rem;border-radius:999px;font-size:.85rem}
+    h1{font-size:clamp(2.2rem,6vw,4rem);margin:.6rem 0 0}
+    .sub{font-size:1.1rem;opacity:.95}
+    .btn{display:inline-block;margin-top:1rem;background:#fff;color:var(--fg);padding:.8rem 1.1rem;border-radius:.75rem;text-decoration:none;font-weight:600}
+
+    nav.sticky{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:50}
+    nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+    nav a{color:var(--fg);text-decoration:none;font-weight:600}
+    nav .links{display:flex;gap:1rem;flex-wrap:wrap}
+
+    .section{max-width:1100px;margin:0 auto;padding:3rem 1rem}
+    h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin:0 0 1rem}
+    p.lead{font-size:1.05rem;color:var(--muted)}
+
+    .grid-2{display:grid;grid-template-columns:1fr;gap:1.5rem}
+    @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}}
+
+    .card{background:var(--card);border-radius:1rem;padding:1rem}
+    .menu{display:grid;grid-template-columns:1fr;gap:1rem}
+    .menu-group{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1rem}
+    .menu-item{display:flex;justify-content:space-between;gap:1rem;border-top:1px dashed #eee;padding:.6rem 0}
+    .menu-item:first-child{border-top:none}
+    .menu-item .name{font-weight:600}
+    .menu-item .desc{color:var(--muted);font-size:.95rem}
+
+    .gallery{columns:1;column-gap:12px}
+    @media(min-width:600px){.gallery{columns:2}}
+    @media(min-width:1000px){.gallery{columns:3}}
+    .gallery img{width:100%;margin:0 0 12px;border-radius:.75rem;cursor:pointer}
+
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;place-items:center}
+    .lightbox img{max-width:92vw;max-height:88vh;border-radius:.5rem}
+
+    .info{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:900px){.info{grid-template-columns:1fr 1fr}}
+    .info .block{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1rem}
+
+    footer{padding:2rem 1rem;background:#0d0f10;color:#d8d8d8}
+    footer .wrap{max-width:1100px;margin:0 auto;display:grid;gap:1rem}
+    a.btn-ghost{display:inline-block;border:1px solid #fff;border-radius:.65rem;padding:.6rem .9rem;color:#fff;text-decoration:none}
+    small, .muted{color:#aaa}
+  </style>
+</head>
+<body>
+  <nav class="sticky" aria-label="Navigation principale">
+    <div class="wrap">
+      <a href="#" aria-label="Accueil Les Salicornes">Les Salicornes</a>
+      <div class="links">
+        <a href="#a-propos">À propos</a>
+        <a href="#carte">La carte</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#infos">Infos</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" role="banner">
+    <div class="inner">
+      <span class="badge">Cuisine de saison</span>
+      <h1>Restaurant Les Salicornes</h1>
+      <p class="sub">Produits frais, recettes maison, accueil chaleureux.</p>
+      <a class="btn" href="#carte">Voir la carte</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="a-propos" class="section">
+      <div class="grid-2">
+        <div>
+          <h2>À propos</h2>
+          <p class="lead">Remplacez ce texte par une courte présentation de votre cuisine, votre histoire, vos valeurs et votre spécialité (poisson, terroir, végétal, etc.).</p>
+          <ul>
+            <li>Service midi et soir, du mardi au samedi</li>
+            <li>Capacité: 40 couverts, terrasse en été</li>
+            <li>Réservations par téléphone</li>
+          </ul>
+        </div>
+        <aside class="card" aria-label="Informations clés">
+          <h3 style="margin-top:0">Horaires</h3>
+          <p>
+            Mar–Sam: 12:00–14:00, 19:00–22:00<br>
+            Dim–Lun: fermé
+          </p>
+          <h3>Coordonnées</h3>
+          <p>
+            <strong>Adresse</strong><br>
+            00 Rue Exemple, 00000 Ville<br>
+            <strong>Téléphone</strong><br>
+            01 23 45 67 89<br>
+            <strong>Email</strong><br>
+            contact@lessalicornes.fr
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="carte" class="section">
+      <h2>La carte</h2>
+      <p class="lead">Indiquez 6–12 plats, avec une courte description et le prix. Mettez à jour facilement en éditant ce fichier.</p>
+      <div class="menu">
+        <div class="menu-group">
+          <h3>Entrées</h3>
+          <div class="menu-item"><div><div class="name">Velouté de courgettes</div><div class="desc">Crème légère, huile basilic</div></div><div>7€</div></div>
+          <div class="menu-item"><div><div class="name">Tartare de dorade</div><div class="desc">Citron vert, ciboulette</div></div><div>11€</div></div>
+        </div>
+        <div class="menu-group">
+          <h3>Plats</h3>
+          <div class="menu-item"><div><div class="name">Poisson du marché</div><div class="desc">Légumes rôtis, beurre citronné</div></div><div>19€</div></div>
+          <div class="menu-item"><div><div class="name">Magret de canard</div><div class="desc">Réduction balsamique, purée maison</div></div><div>22€</div></div>
+        </div>
+        <div class="menu-group">
+          <h3>Desserts</h3>
+          <div class="menu-item"><div><div class="name">Crème brûlée</div><div class="desc">Vanille de Madagascar</div></div><div>7€</div></div>
+          <div class="menu-item"><div><div class="name">Mousse au chocolat</div><div class="desc">70% cacao, chantilly</div></div><div>7€</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <h2>Galerie</h2>
+      <p class="lead">Remplacez les images ci-dessous par vos photos (mettez-les dans le dossier <code>images/</code>).</p>
+      <div class="gallery" aria-live="polite">
+        <img src="images/plat1.jpg" alt="Plat 1" loading="lazy" />
+        <img src="images/plat2.jpg" alt="Plat 2" loading="lazy" />
+        <img src="images/salle.jpg" alt="Salle du restaurant" loading="lazy" />
+        <img src="images/plat3.jpg" alt="Plat 3" loading="lazy" />
+        <img src="images/terrasse.jpg" alt="Terrasse" loading="lazy" />
+      </div>
+      <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image en grand">
+        <img src="" alt="Agrandissement" />
+      </div>
+    </section>
+
+    <section id="infos" class="section">
+      <div class="info">
+        <div class="block">
+          <h2 style="margin-top:0">Infos & Réservations</h2>
+          <p>
+            Téléphone: <strong>01 23 45 67 89</strong><br>
+            Email: <strong>contact@lessalicornes.fr</strong><br>
+            Adresse: <strong>00 Rue Exemple, 00000 Ville</strong>
+          </p>
+          <p class="muted">Astuce: ajoutez un lien “Appeler” et “Itinéraire”.</p>
+          <p>
+            <a class="btn" href="tel:+33123456789">Appeler</a>
+            <a class="btn" href="https://maps.google.com/?q=Restaurant%20Les%20Salicornes" target="_blank" rel="noopener">Itinéraire</a>
+          </p>
+        </div>
+        <div class="block" aria-label="Carte Google Maps">
+          <div style="position:relative;overflow:hidden;border-radius:1rem">
+            <!-- Remplacez l'URL de l'iframe par votre adresse exacte depuis Google Maps > Partager > Intégrer une carte -->
+            <iframe title="Localisation Restaurant Les Salicornes" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999999!2d2.294481!3d48.858370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sVotre+restaurant!5e0!3m2!1sfr!2sfr!4v0000000000" width="100%" height="350" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong>Les Salicornes</strong><br>
+        00 Rue Exemple, 00000 Ville — 01 23 45 67 89 — contact@lessalicornes.fr
+      </div>
+      <div>
+        <a class="btn-ghost" href="#a-propos">Haut de page</a>
+        <p class="muted">© <span id="year"></span> Les Salicornes. Pas de cookies, pas de collecte de données.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Année automatique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox très légère pour la galerie
+    const lb = document.querySelector('.lightbox');
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => { lbImg.src = img.src; lb.style.display = 'grid'; lb.focus(); });
+    });
+    lb.addEventListener('click', () => { lb.style.display = 'none'; lbImg.src=''; });
+
+    // (Optionnel) Cloudflare Web Analytics: collez le script fourni par Cloudflare ici, avant la balise </body>.
+  </script>
+
+  <!-- Données structurées Restaurant (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurant Les Salicornes",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "00 Rue Exemple",
+      "postalCode": "00000",
+      "addressLocality": "Ville",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33-1-23-45-67-89",
+    "servesCuisine": "Cuisine de saison",
+    "url": "https://votre-domaine.fr",
+    "openingHours": ["Tu-Sa 12:00-14:00", "Tu-Sa 19:00-22:00"],
+    "priceRange": "€€",
+    "image": [
+      "https://votre-domaine.fr/images/plat1.jpg",
+      "https://votre-domaine.fr/images/plat2.jpg"
+    ]
+  }
+  </script>
+</body>
+</html>
